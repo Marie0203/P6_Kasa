@@ -1,0 +1,18 @@
+@use "../../sass/variables" as *;
+
+.banner {
+    background: url('/assets/Banner.png');
+    width: 100%;
+    max-width: 1240px;
+    height: 223px;
+    display: grid;
+    place-items: center;
+    color: $color-secondary;
+    margin-bottom: 2rem;
+    border-radius: 25px;
+}
+
+h1 {
+    font-weight: 500;
+    font-size: 30px;
+}

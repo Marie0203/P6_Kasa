@@ -1,0 +1,25 @@
+@use "../../sass/variables" as *;
+
+.grid {
+    background-color: $grid-background;
+    min-height: 50vh;
+    border-radius: 25px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding: 1rem;
+    justify-content: center;
+    max-width: 1240px;
+    & > * {
+        width: 100%;
+        max-width: 20rem;
+    }
+}
+
+@media screen and (width <= 768px) {
+    .grid {
+        justify-content: center;
+        background-color: $color-secondary;
+        padding: 0;
+    }
+}

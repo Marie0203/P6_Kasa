@@ -1,0 +1,25 @@
+@use "../../sass/variables" as *;
+
+.navbar {
+    display: flex;
+    align-items: center;
+    padding: 2rem;
+    color: $color-primary;
+    font-weight: 500;
+    gap: 2rem;
+    max-width: 1240px;
+
+    &>*:first-child {
+        margin-right: auto;
+    }
+
+    & a {
+        text-decoration: none;
+        color: $color-primary;
+
+        &.active,
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
