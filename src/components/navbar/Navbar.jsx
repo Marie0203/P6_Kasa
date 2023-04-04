@@ -16,7 +16,7 @@ function Navbar() {
         <NavLink to="/about">
         <div>A propos</div>
         </NavLink>
-    </nav>
+        </nav>
     );
 }
 
