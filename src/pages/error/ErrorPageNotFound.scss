@@ -3,27 +3,33 @@
 .error-page {
     color: $color-primary;
     text-align: center;
+
     h1 {
         font-weight: 700;
         font-size: 250px;
         margin: 2rem 0rem;
     }
+
     h2 {
         font-size: 35px;
         font-weight: 500;
         margin-bottom: 6rem;
     }
+
     a {
         color: $color-primary;
         text-decoration: none;
+
         &:hover {
             text-decoration: underline;
         }
     }
-    @media screen and (width <= 768px) {
+
+    @media screen and (width <=768px) {
         h1 {
             font-size: 90px;
         }
+
         h2 {
             font-size: 18px;
         }

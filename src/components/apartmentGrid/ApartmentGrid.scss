@@ -10,13 +10,14 @@
     padding: 1rem;
     justify-content: center;
     max-width: 1230px;
-    & > * {
+
+    &>* {
         width: 100%;
         max-width: 20rem;
     }
 }
 
-@media screen and (width <= 768px) {
+@media screen and (width <=768px) {
     .grid {
         justify-content: center;
         background-color: $color-secondary;

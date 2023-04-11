@@ -7,16 +7,16 @@ import Footer from "../../components/footer/Footer";
 import Main from "../../components/main/Main";
 
 function Home() {
-    return (
-      <div>
-        <Navbar />
-        <Main>
-          <Banner />
-          <ApartmentGrid />
-        </Main>
-        <Footer />
-      </div>
-    );
-  }
+  return (
+    <div>
+      <Navbar />
+      <Main>
+        <Banner />
+        <ApartmentGrid />
+      </Main>
+      <Footer />
+    </div>
+  );
+}
 
 export default Home;

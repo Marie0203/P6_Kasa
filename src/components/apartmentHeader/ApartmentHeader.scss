@@ -1,0 +1,97 @@
+@use "../../sass/variables" as *;
+
+.apartment__header {
+    display: flex;
+    gap: 1rem;
+
+    @media screen and (width <=768px) {
+        flex-direction: column;
+    }
+
+    .apartment__title {
+        flex-grow: 1;
+
+        & h1 {
+            font-size: 30px;
+
+            @media screen and (width <=768px) {
+                font-size: 23px;
+            }
+        }
+    }
+
+    .apartment__owner {
+        display: flex;
+        margin-bottom: 1rem;
+        flex-direction: column;
+        justify-content: space-between;
+
+        @media screen and (width <=768px) {
+            flex-direction: row;
+        }
+    }
+
+    .apartment__owner__details {
+        display: flex;
+        gap: 0.5rem;
+
+        @media screen and (width <=768px) {
+            order: 1;
+        }
+    }
+
+    .apartment__owner__badge img {
+        height: 65px;
+        width: 65px;
+        border-radius: 50%;
+        background-color: $color-badge;
+    }
+
+    .apartment__owner__stars {
+        display: flex;
+        gap: 0.5rem;
+        color: $color-star-off;
+
+        * {
+            font-size: 2rem;
+
+            @media screen and (width <=768px) {
+                font-size: 1.5rem;
+            }
+        }
+
+        .on {
+            color: $color-primary;
+        }
+
+    }
+
+    h3 {
+        margin-top: 0.5rem;
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        font-weight: 500;
+
+        @media screen and (width <=768px) {
+            font-size: 15px;
+        }
+
+    }
+
+    & .apartment__tags {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(100px, 150px));
+        gap: 1rem;
+        margin-top: 2rem;
+
+        span {
+            background-color: $color-primary;
+            color: $color-secondary;
+            padding: 5px 10px;
+            border-radius: 10px;
+            font-size: 14px;
+            text-align: center;
+        }
+    }
+}
