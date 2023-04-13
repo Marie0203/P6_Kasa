@@ -14,7 +14,7 @@ function ApartmentHeader(props) {
                 <h2>{flat.location}</h2>
                 <div className="apartment__tags">
                     {flat.tags.map((tag) => (
-                        <span>{tag}</span>
+                        <span key={tag}>{tag}</span>
                     ))}
                 </div>
             </div>
@@ -30,7 +30,7 @@ function ApartmentHeader(props) {
                 </div>
                 <div className="apartment__owner__stars">
                     {[1, 2, 3, 4, 5].map((number) => (
-                        <span className={flat.rating >= number ? "on" : ""}>★</span>
+                        <span key={number} className={flat.rating >= number ? "on" : ""}>★</span>
                     ))}
                 </div>
             </div>

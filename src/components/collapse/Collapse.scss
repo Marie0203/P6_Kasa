@@ -1,6 +1,9 @@
 @use "../../sass/variables" as *;
 
 .apartment__description {
+    margin-bottom: 1rem;
+    flex-basis: 100%;
+    overflow: hidden;
     p {
         margin-block: 0;
     }
@@ -9,11 +12,10 @@
         background-color: $color-primary;
         color: $color-secondary;
         border-radius: 10px;
-        padding: 1rem;
+        padding: 0.7em 1em;
         display: flex;
         justify-content: space-between;
-        margin-top: 1rem;
-
+        align-items: center;
         i {
             font-size: 1.5rem;
             cursor: pointer;
@@ -23,9 +25,17 @@
     .description__content {
         background-color: $grid-background;
         border-radius: 10px;
-        padding: 1rem;
+        padding: 1rem 1rem;
         position: relative;
         top: -0.3rem;
         z-index: -1;
+        transition: transform 0.5s ease-in-out;
+        &.hidden {
+            transform: translateY(-100%);
+        }
+    }
+    
+    li {
+        list-style-type: none;
     }
 }

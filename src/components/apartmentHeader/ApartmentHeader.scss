@@ -3,7 +3,6 @@
 .apartment__header {
     display: flex;
     gap: 1rem;
-
     @media screen and (width <=768px) {
         flex-direction: column;
     }
@@ -24,9 +23,9 @@
         display: flex;
         margin-bottom: 1rem;
         flex-direction: column;
-        justify-content: space-between;
-
+        
         @media screen and (width <=768px) {
+            justify-content: space-between;
             flex-direction: row;
         }
     }

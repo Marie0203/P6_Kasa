@@ -3,7 +3,7 @@ import "./ApartmentPage.scss";
 import Navbar from "../../components/navbar/Navbar";
 import Footer from "../../components/footer/Footer";
 import Main from "../../components/main/Main";
-import CollapseApartment from "../../components/collapse/Collapse";
+import Collapse from "../../components/collapse/Collapse";
 import { useLocation } from "react-router-dom";
 import BannerApartment from "../../components/bannerApartment/BannerApartment";
 import ApartmentHeader from "../../components/apartmentHeader/ApartmentHeader";
@@ -28,11 +28,16 @@ function ApartmentPage() {
             <Navbar />
             <Main>
                 <div className="apartment-page">
-                    <BannerApartment imageUrl={flat.cover} />
+                    <BannerApartment pictures={flat.pictures} />
                     <ApartmentHeader flat={flat} />
                     <div className="apartment__description__area">
-                        <CollapseApartment />
-                        <CollapseApartment />
+                        <Collapse title="Description" content={flat.description} />
+                        <Collapse
+                            title="Equipements"
+                            content={flat.equipments.map((eq, i) => (
+                                <li key={i}>{eq}</li>
+                            ))}
+                        />
                     </div>
                 </div>
             </Main>
