@@ -1,0 +1,31 @@
+.aboutBanner {
+    position: relative;
+}
+
+.aboutBannerImg {
+    width: 100%;
+    height: 15rem;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+}
+
+.aboutBannerWrapper {
+    height: 15rem;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, .1);
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+    .aboutBanner {
+        margin: 0 2rem;
+    }
+
+    .aboutBannerImg,
+    .aboutBannerWrapper {
+        border-radius: 10px;
+    }
+}

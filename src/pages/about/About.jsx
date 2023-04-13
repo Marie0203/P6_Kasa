@@ -3,16 +3,15 @@ import "./About.scss";
 import Navbar from "../../components/navbar/Navbar";
 import Footer from "../../components/footer/Footer";
 import Main from "../../components/main/Main";
-import Banner from "../../components/banner/Banner";
+import AboutBanner from "../../components/aboutBanner/AboutBanner";
 import Collapse from "../../components/collapse/Collapse";
-
 
 function About() {
     return (
         <>
             <Navbar />
             <Main>
-                <Banner />
+                <AboutBanner />
                 <div className="about__container">
                     <Collapse title="Fiabilité" content="Les annonces postées sur Kasa garantissent une fiabilité totale. Les photos sont conformes aux logements, et toutes les informations sont régulièrement vérifiées par nos équipes." />
                     <Collapse title="Respect" content="La bienveillance fait partie des valeurs fondatrices de Kasa. Tout comportement discriminatoire ou de perturbation du voisinage entraînera une exclusion de notre plateforme." />
