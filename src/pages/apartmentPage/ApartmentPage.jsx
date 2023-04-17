@@ -4,25 +4,26 @@ import Navbar from "../../components/navbar/Navbar";
 import Footer from "../../components/footer/Footer";
 import Main from "../../components/main/Main";
 import Collapse from "../../components/collapse/Collapse";
-import { useLocation } from "react-router-dom";
+import { useSearchParams } from "react-router-dom";
 import BannerApartment from "../../components/bannerApartment/BannerApartment";
 import ApartmentHeader from "../../components/apartmentHeader/ApartmentHeader";
+import ErrorPageNotFound from "../../pages/error/ErrorPageNotFound";
 
 function ApartmentPage() {
-    const location = useLocation();
+    const [searchParams] = useSearchParams();
+    const [apartmentId] = useState(searchParams.get('_id'));
     const [flat, setFlat] = useState(null);
     useEffect(fetchApartmentData, []);
-
     function fetchApartmentData() {
         fetch("data.json")
             .then((res) => res.json())
             .then((flats) => {
-                const flat = flats.find((flat) => flat.id === location.state.apartmentId);
+                const flat = flats.find((flat) => flat.id === apartmentId);
                 setFlat(flat);
             })
-            .catch(console.error);
     }
-    if (flat == null) return <div>Loading...</div>
+    if (flat == null) return (<ErrorPageNotFound />)
+
     return (
         <>
             <Navbar />

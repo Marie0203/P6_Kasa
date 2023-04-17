@@ -1,46 +1,44 @@
 import React, { useState } from "react";
 import "./BannerApartment.scss";
+import chevronGauche from "../../assets/ChevronGauche.png"
+import chevronDroit from "../../assets/ChevronDroit.png"
 
-export function BannerApartment(props) {
-    const pictures = props.pictures;
+function BannerApartment({ pictures }) {
+    const [index, setIndex] = useState(0)
+    const totalPictures = pictures.length - 1 
 
-    const [currentPicture, setCurrentPicture] = useState(0);
+    if (index < 0) setIndex(totalPictures)  
+    if (index > totalPictures) setIndex(0)  
 
-    const getClassName = (i) => {
-        if (i === currentPicture) return "show";
-        return "";
-    };
-
-    const moveToNext = () => {
-        setCurrentPicture((currentPicture + 1) % pictures.length);
-    };
-
-    const moveToPrevious = () => {
-        const newCurrentPicture = currentPicture - 1;
-        if (newCurrentPicture < 0) {
-            setCurrentPicture(pictures.length - 1);
-            return;
-        }
-        setCurrentPicture(currentPicture - 1);
-    };
     return (
-        <div className="banner__apartment">
-            <div className="image__container">
-                {pictures.map((pic, i) => (
-                    <img key={pic} src={pic} alt="" className={getClassName(i)}></img>
-                ))}
+        <div className="carousel">
+
+            {/* affiche la première image */}
+            <div className="div-image">
+                <img src={pictures[index]} className="classImage" key={"car-" + index} alt={"photo " + index} />
             </div>
-            <button className="btn btn-previous" onClick={moveToPrevious}>
-                <i className="fas fa-chevron-left"></i>
-            </button>
-            <span className="slide-counter">
-                {currentPicture + 1} / {pictures.length}
-            </span>
-            <button className="btn btn-next" onClick={moveToNext}>
-                <i className="fas fa-chevron-right"></i>
-            </button>
+
+            {/* si plus d'une image, alors ce code sera exécuté */}
+            {totalPictures > 0 && (
+                <div className="button">
+                    <button onClick={() => setIndex(index - 1)}>{index}
+                        <img src={chevronGauche} className='classChevronGauche' alt={"flèche gauche "} />
+                    </button>
+                    <button onClick={() => setIndex(index + 1)}>{index}
+                        <img src={chevronDroit} className="classChevronDroit" alt={"flèche droite "} />
+                    </button>
+                </div>
+            )}
+            {totalPictures > 0 && (
+                // compteur d'images //
+                <div className="compteur">
+                    <p className="compteurText">
+                        {index + 1}/{totalPictures + 1}
+                    </p>
+                </div>
+            )}
         </div>
-    );
+    )
 }
 
 export default BannerApartment;
