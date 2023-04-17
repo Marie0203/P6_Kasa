@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import "./AboutBanner.scss";
 import about from '../../assets/AboutBanner.png';
 

@@ -19,3 +19,5 @@ export function ErrorPageNotFound() {
         </>
     );
 }
+
+export default ErrorPageNotFound;
