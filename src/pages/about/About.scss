@@ -3,4 +3,8 @@
 .about__container {
     padding-inline: 3rem;
     color: $color-primary;
+
+    @media screen and (width <=768px) {
+        padding-inline: 0;
+    }
 }

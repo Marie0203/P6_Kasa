@@ -21,11 +21,12 @@
 
 @media screen and (max-width: 768px) {
     .aboutBanner {
-        margin: 0 2rem;
+        margin: 0;
     }
 
     .aboutBannerImg,
     .aboutBannerWrapper {
         border-radius: 10px;
+        height: 220px;
     }
 }
