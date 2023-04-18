@@ -7,6 +7,7 @@ function ApartmentHeader(props) {
     const name = flat.host.name;
     const [firstName, lastName] = name.split(" ");
 
+    // Affichage titre, location, tag, nom du propriétaire et sa photo, et les étoiles //
     return (
         <div className="apartment__header">
             <div className="apartment__title">

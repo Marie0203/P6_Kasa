@@ -4,6 +4,7 @@ import About from "./pages/about/About";
 import ErrorPageNotFound from "./pages/error/ErrorPageNotFound";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
+// Définit les différentes routes //
 const router = createBrowserRouter([
     {
         path: "/",

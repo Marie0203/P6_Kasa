@@ -2,6 +2,7 @@ import React from "react";
 import "./Footer.scss";
 import logoFooter from "../../assets/logo-footer.png";
 
+// Affichage du footer //
 function Footer() {
     return (
         <div className="footer">

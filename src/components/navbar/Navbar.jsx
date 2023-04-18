@@ -3,6 +3,7 @@ import { NavLink } from "react-router-dom";
 import './Navbar.scss';
 import logo from "../../assets/LOGO.png";
 
+// Affichage du logo et des liens "accueil" et "A propos" //
 function Navbar() {
     return (
         <nav className='navbar'>

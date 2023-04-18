@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import "./AboutBanner.scss";
 import about from '../../assets/AboutBanner.png';
 
+// Affichage de la bannière de la page à propos //
 class AboutBanner extends Component {
     render() {
         return (

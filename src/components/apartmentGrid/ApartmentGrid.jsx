@@ -9,6 +9,7 @@ function ApartmentGrid() {
     // useEffect avec une array vide exécute cette fonction au chargement du composant //
     useEffect(fetchApartments, []);
 
+    // Récupération des logements //
     function fetchApartments() {
         fetch("data.json")
             .then((res) => res.json())

@@ -6,6 +6,7 @@ import ApartmentGrid from "../../components/apartmentGrid/ApartmentGrid";
 import Footer from "../../components/footer/Footer";
 import Main from "../../components/main/Main";
 
+// Affichage de tous les éléments de la page d'accueil //
 function Home() {
   return (
     <div>

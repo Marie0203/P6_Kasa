@@ -6,6 +6,7 @@ import Main from "../../components/main/Main";
 import AboutBanner from "../../components/aboutBanner/AboutBanner";
 import Collapse from "../../components/collapse/Collapse";
 
+// Affichage des collapse et du contenu qui sera à l'intèrieur //
 function About() {
     return (
         <>

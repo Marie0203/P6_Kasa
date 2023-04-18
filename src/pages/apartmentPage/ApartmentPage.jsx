@@ -9,6 +9,7 @@ import BannerApartment from "../../components/bannerApartment/BannerApartment";
 import ApartmentHeader from "../../components/apartmentHeader/ApartmentHeader";
 import ErrorPageNotFound from "../../pages/error/ErrorPageNotFound";
 
+// Récupération de l'id d'un logement //
 function ApartmentPage() {
     const [searchParams] = useSearchParams();
     const [apartmentId] = useState(searchParams.get('_id'));
@@ -22,8 +23,10 @@ function ApartmentPage() {
                 setFlat(flat);
             })
     }
+    // Redirection vers la page 404 si erreur dans l'id //
     if (flat == null) return (<ErrorPageNotFound />)
-
+    
+    // Affichage de tout les éléments de la page en détail d'un appartement //
     return (
         <>
             <Navbar />

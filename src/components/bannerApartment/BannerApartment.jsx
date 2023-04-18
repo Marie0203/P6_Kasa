@@ -13,7 +13,7 @@ function BannerApartment({ pictures }) {
     return (
         <div className="carousel">
 
-            {/* affiche la première image */}
+         {/* affiche la première image */}
             <div className="div-image">
                 <img src={pictures[index]} className="classImage" key={"car-" + index} alt={"photo " + index} />
             </div>

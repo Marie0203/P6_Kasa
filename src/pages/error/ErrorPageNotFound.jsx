@@ -4,6 +4,7 @@ import "./ErrorPageNotFound.scss";
 import Main from "../../components/main/Main";
 import Footer from "../../components/footer/Footer";
 
+// Affichage de la page 404 //
 export function ErrorPageNotFound() {
     return (
         <>
