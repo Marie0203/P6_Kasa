@@ -9,7 +9,7 @@ import Collapse from "../../components/collapse/Collapse";
 // Affichage des collapse et du contenu qui sera à l'intèrieur //
 function About() {
     return (
-        <>
+        <div>
             <Navbar />
             <Main>
                 <AboutBanner />
@@ -21,7 +21,7 @@ function About() {
                 </div>
             </Main>
             <Footer />
-        </>
+        </div>
     );
 }
 

@@ -1,13 +1,15 @@
 @use "../../sass/variables" as *;
 
 .apartment__description {
-    margin-bottom: 1rem;
     flex-basis: 100%;
     overflow: hidden;
 
     p {
         margin-block: 0;
         font-size: 18px;
+        @media (max-width: 768px) {
+            font-size: 12px;
+        }
     }
 
     .description__header {

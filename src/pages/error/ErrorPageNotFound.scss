@@ -18,11 +18,6 @@
 
     a {
         color: $color-primary;
-        text-decoration: none;
-
-        &:hover {
-            text-decoration: underline;
-        }
     }
 
     @media screen and (width <=768px) {

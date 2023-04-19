@@ -3,10 +3,11 @@
 .banner {
     position: relative;
     margin-bottom: 2rem;
+    margin-left: 2rem;
 }
 
 .bannerImg {
-    width: 100%;
+    width: 95%;
     height: 12rem;
     object-fit: cover;
     border-radius: 10px;
@@ -31,12 +32,12 @@
     background-color: rgba(0, 0, 0, .1);
     position: absolute;
     top: 0;
-    width: 100%;
+    width: 95%;
 }
 
 @media screen and (max-width: 768px) {
     .banner {
-        max-width: 100%;
+        width: 92%;
     }
 
     .bannerImg {
@@ -45,5 +46,10 @@
 
     .bannerWrapper {
         height: 10rem;
+    }
+
+    .bannerText {
+        text-align: left;
+        font-size: 20px;
     }
 }

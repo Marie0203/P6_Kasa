@@ -3,10 +3,15 @@
 .footer {
     background-color: $color-tertiary;
     color: $color-secondary;
-    padding: 20px;
     text-align: center;
-    min-height: 100px;
     display: grid;
     place-items: center;
-    margin-top: 5rem;
+    gap: 2rem;
+    padding: 70px;
+    position: absolute;
+    right: 0;
+    left: 0;
+    margin-top: 25rem;
 }
+
+

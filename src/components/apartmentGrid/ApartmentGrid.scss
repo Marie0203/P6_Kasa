@@ -2,12 +2,13 @@
 
 .grid {
     background-color: $grid-background;
-    min-height: 50vh;
     border-radius: 25px;
     display: flex;
     flex-wrap: wrap;
     gap: 3.5rem;
-    padding: 2rem 0;
+    padding: 1rem;
+    margin: 2rem;
+    margin-bottom: 3rem;
     justify-content: center;
 
     &>* {
@@ -20,10 +21,11 @@
     }
 }
 
+
 @media screen and (width <=768px) {
     .grid {
-        justify-content: center;
         background-color: $color-secondary;
         padding: 0;
+        justify-content: center;
     }
 }
