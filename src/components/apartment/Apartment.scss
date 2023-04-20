@@ -11,18 +11,18 @@
     height: 340px;
     background-size: cover;
     position: relative;
-    
-    
+
+
     & img {
         width: 100%;
         height: 340px;
         object-fit: cover;
         border-radius: 1rem;
         box-shadow: rgb(149 157 165 / 20%) 0px 8px 24px;
-        filter: brightness(0.8); 
+        filter: brightness(0.8);
     }
-    
-    
+
+
     & &__subtitle {
         width: 50%;
         color: $color-secondary;
