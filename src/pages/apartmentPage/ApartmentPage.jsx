@@ -20,13 +20,16 @@ function ApartmentPage() {
         fetch("data.json")
             .then((res) => res.json())
             .then((flats) => {
-                const flat = flats.find((flat) => flat.id === apartmentId);
-    
+                const flat = flats.find((flat) => flat.id === apartmentId) 
                 setFlat(flat);
-            })
+            }
+            )
         }
-        if (flat == null) return (<ErrorPageNotFound />)
-    // Redirection vers la page 404 si erreur dans l'id //
+        if (flat == null) return <>Loading...</> ; (<ErrorPageNotFound />)
+            
+        // Redirection vers la page 404 si erreur dans l'id //
+
+    
     
     // Affichage de tout les éléments de la page en détail d'un appartement //
     return (

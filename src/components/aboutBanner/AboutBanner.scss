@@ -1,5 +1,7 @@
 .aboutBanner {
     position: relative;
+    width: 92%;
+    margin-left: 2rem;
 }
 
 .aboutBannerImg {
@@ -22,6 +24,7 @@
 @media screen and (max-width: 768px) {
     .aboutBanner {
         margin: 0;
+        width: 90%;
     }
 
     .aboutBannerImg,

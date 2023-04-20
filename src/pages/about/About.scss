@@ -1,10 +1,13 @@
 @use "../../sass/variables" as *;
 
 .about__container {
-    padding-inline: 3rem;
+    margin-inline: 4rem;
     color: $color-primary;
+    margin-right: 6rem;
 
     @media screen and (width <=768px) {
         padding-inline: 0;
+        margin-inline: 0;
+        width: 90%;
     }
 }

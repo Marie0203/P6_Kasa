@@ -10,6 +10,7 @@
     margin: 2rem;
     margin-bottom: 3rem;
     justify-content: center;
+    width: 90%;
 
     &>* {
         width: 100%;
@@ -27,5 +28,7 @@
         background-color: $color-secondary;
         padding: 0;
         justify-content: center;
+        width: 90%;
+        margin: 1rem 0;
     }
 }

@@ -45,6 +45,9 @@
         width: 65px;
         border-radius: 50%;
         background-color: $color-badge;
+        @media screen and (width <=768px) {
+            margin-right: 1rem;
+        }
     }
 
     .apartment__owner__stars {
