@@ -27,7 +27,7 @@ function ApartmentPage() {
             )
     }
 
-    if (flat == null) return <>isLoading...</>; (<ErrorPageNotFound />)
+    if (flat == null) return (<ErrorPageNotFound />)
 
     // Redirection vers la page 404 si erreur dans l'id //
 
