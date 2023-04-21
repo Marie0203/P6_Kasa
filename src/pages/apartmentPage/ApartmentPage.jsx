@@ -14,7 +14,7 @@ function ApartmentPage() {
     const [searchParams] = useSearchParams();
     const [apartmentId] = useState(searchParams.get('_id'));
     const [flat, setFlat] = useState(null);
-
+    const [loading, setLoading] = useState(true)
 
     useEffect(fetchApartmentData, [apartmentId]);
     function fetchApartmentData() {
@@ -22,15 +22,15 @@ function ApartmentPage() {
             .then((res) => res.json())
             .then((flats) => {
                 const flat = flats.find((flat) => flat.id === apartmentId)
+                setLoading(false)
                 setFlat(flat);
             }
             )
     }
-
-    if (flat == null) return (<ErrorPageNotFound />)
-
+    if (loading == true) return
     // Redirection vers la page 404 si erreur dans l'id //
-
+    if (flat == null) return (
+        <ErrorPageNotFound />)
 
 
     // Affichage de tout les éléments de la page en détail d'un appartement //
