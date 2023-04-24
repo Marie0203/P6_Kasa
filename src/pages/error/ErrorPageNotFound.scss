@@ -3,6 +3,7 @@
 .error-page {
     color: $color-primary;
     text-align: center;
+    margin-bottom: 30rem;
 
     h1 {
         font-weight: 700;
@@ -18,18 +19,19 @@
 
     a {
         color: $color-primary;
+        margin-right: 2rem; 
     }
 
     @media screen and (width <=768px) {
         h1 {
             font-size: 90px;
             width: 90%;
+            margin-top: 10rem;
         }
 
         h2 {
             font-size: 18px;
             width: 90%;
         }
-
     }
 }

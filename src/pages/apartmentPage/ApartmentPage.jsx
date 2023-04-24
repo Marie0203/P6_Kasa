@@ -21,7 +21,7 @@ function ApartmentPage() {
         fetch("data.json")
             .then((res) => res.json())
             .then((flats) => {
-                const flat = flats.find((flat) => flat.id === apartmentId)
+                const flat = flats.find((flat) => flat.id === apartmentId);
                 setLoading(false)
                 setFlat(flat);
             }
