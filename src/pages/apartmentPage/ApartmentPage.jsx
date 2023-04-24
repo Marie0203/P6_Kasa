@@ -12,22 +12,22 @@ import ErrorPageNotFound from "../../pages/error/ErrorPageNotFound";
 // Récupération de l'id d'un logement //
 function ApartmentPage() {
     const [searchParams] = useSearchParams();
-    const [apartmentId] = useState(searchParams.get('_id'));
+    const [apartmentId] = useState(searchParams.get(`id`));
     const [flat, setFlat] = useState(null);
     const [loading, setLoading] = useState(true)
 
-    useEffect(fetchApartmentData, [apartmentId]);
+    useEffect(fetchApartmentData);
     function fetchApartmentData() {
         fetch("data.json")
             .then((res) => res.json())
             .then((flats) => {
-                const flat = flats.find((flat) => flat.id === apartmentId);
+                const flat = flats.find((flat) => flat.id === apartmentId)
                 setLoading(false)
                 setFlat(flat);
             }
             )
     }
-    if (loading == true) return
+    if (loading === true) return
     // Redirection vers la page 404 si erreur dans l'id //
     if (flat == null) return (
         <ErrorPageNotFound />)

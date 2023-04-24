@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 // Affichage du logement sur la page d'accueil sous forme de card //
 function Apartment(props) {
     return (
-        <Link to={{ pathname: "/flat", search: "?_id=" + props.id }}
+        <Link to={{ pathname: "/flat", search: "?id=" + props.id }}
             state={{
                 apartmentId: props.id
             }}
