@@ -3,6 +3,7 @@
 .apartment__header {
     display: flex;
     gap: 1rem;
+    margin-top: 1rem;
 
     @media screen and (width <=768px) {
         flex-direction: column;
